@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.8.2)
 project(OpenGL)
+set (CMAKE_CXX_STANDARD 11)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
 set(CMAKE_FRAMEWORK_PATH "~/.brew/Cellar/")
 set(SOURCE src/)
 set(INCLUDE include/)
-
 find_package(GLUT)
 set(GLEW_INCLUDE_DIR "/Users/ggavryly/.brew/Cellar/glew/2.1.0/include/GL/")
 set(GLEW_LIBRARIES "/Users/ggavryly/.brew/Cellar/glew/2.1.0/lib/libGLEW.dylib")
@@ -38,6 +38,6 @@ file(GLOB all
         "${INCLUDE}*.hpp"
         "${SOURCE}*.cpp")
 
-add_executable(${PROJECT_NAME} ${all} src/Shader.cpp include/Shader.hpp src/Texture.cpp include/Texture.hpp src/Menu.cpp include/Menu.hpp)
+add_executable(${PROJECT_NAME} ${all})
 
 target_link_libraries(${PROJECT_NAME} "-framework Cocoa" -lglfw ${FREETYPE_LIBRARIES} ${GLEW_LIBRARIES} ${GLUT_LIBRARIES} ${SOIL_LIBRARY})

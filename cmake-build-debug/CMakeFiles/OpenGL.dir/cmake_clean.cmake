@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/OpenGL.dir/src/Animation.cpp.o"
   "CMakeFiles/OpenGL.dir/src/Menu.cpp.o"
   "CMakeFiles/OpenGL.dir/src/Shader.cpp.o"
   "CMakeFiles/OpenGL.dir/src/Text.cpp.o"

@@ -43,10 +43,10 @@ Shader::Shader(const GLchar* vertexPath, const GLchar* fragmentPath)
 	glDeleteShader(fragmentShader);
 }
 
-Shader::Shader(Shader const &)
+Shader::~Shader()
 {}
 
-Shader::~Shader()
+Shader::Shader()
 {}
 
 void Shader::Use()

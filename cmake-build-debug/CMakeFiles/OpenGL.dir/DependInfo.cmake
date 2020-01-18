@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/ggavryly/CLionProjects/OpenGL/src/Animation.cpp" "/Users/ggavryly/CLionProjects/OpenGL/cmake-build-debug/CMakeFiles/OpenGL.dir/src/Animation.cpp.o"
   "/Users/ggavryly/CLionProjects/OpenGL/src/Menu.cpp" "/Users/ggavryly/CLionProjects/OpenGL/cmake-build-debug/CMakeFiles/OpenGL.dir/src/Menu.cpp.o"
   "/Users/ggavryly/CLionProjects/OpenGL/src/Shader.cpp" "/Users/ggavryly/CLionProjects/OpenGL/cmake-build-debug/CMakeFiles/OpenGL.dir/src/Shader.cpp.o"
   "/Users/ggavryly/CLionProjects/OpenGL/src/Text.cpp" "/Users/ggavryly/CLionProjects/OpenGL/cmake-build-debug/CMakeFiles/OpenGL.dir/src/Text.cpp.o"

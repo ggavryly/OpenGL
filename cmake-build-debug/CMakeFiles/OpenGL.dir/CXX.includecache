@@ -8,9 +8,35 @@
 
 ../SOIL/src/SOIL.h
 
+../include/Animation.hpp
+Texture.hpp
+../include/Texture.hpp
+
+../include/Menu.hpp
+main.hpp
+../include/main.hpp
+Text.hpp
+../include/Text.hpp
+Texture.hpp
+../include/Texture.hpp
+Animation.hpp
+../include/Animation.hpp
+
 ../include/Shader.hpp
 main.hpp
 ../include/main.hpp
+
+../include/Text.hpp
+main.hpp
+../include/main.hpp
+Shader.hpp
+../include/Shader.hpp
+
+../include/Texture.hpp
+main.hpp
+../include/main.hpp
+Shader.hpp
+../include/Shader.hpp
 
 ../include/main.hpp
 iostream
@@ -1508,9 +1534,7 @@ detail/setup.hpp
 detail/func_vector_relational.inl
 /Users/ggavryly/.brew/Cellar/glm/0.9.9.5/include/glm/detail/func_vector_relational.inl
 
-/Users/ggavryly/CLionProjects/OpenGL/src/main.cpp
-main.hpp
-/Users/ggavryly/CLionProjects/OpenGL/src/main.hpp
-Shader.hpp
-/Users/ggavryly/CLionProjects/OpenGL/src/Shader.hpp
+/Users/ggavryly/CLionProjects/OpenGL/src/Menu.cpp
+Menu.hpp
+/Users/ggavryly/CLionProjects/OpenGL/src/Menu.hpp
 

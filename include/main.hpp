@@ -17,17 +17,17 @@
 #include "ft2build.h"
 #include FT_FREETYPE_H
 #include "SOIL.h"
-//struct Rect
-//{
-//	Rect() = default;
-//	Rect(float x0,float y0,float x1,float y1)
-//			: x0(x0)
-//			, y0(y0)
-//			, x1(x1)
-//			, y1(y1)
-//	{}
-//	float x0;
-//	float y0;
-//	float x1;
-//	float y1;
-//};
+struct Rect
+{
+	Rect() = default;
+	Rect(float x0,float y0,float x1,float y1)
+			: x0(x0)
+			, y0(y0)
+			, x1(x1)
+			, y1(y1)
+	{}
+	float x0;
+	float y0;
+	float x1;
+	float y1;
+};

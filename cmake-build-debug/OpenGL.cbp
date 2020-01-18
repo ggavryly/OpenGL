@@ -100,6 +100,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/ggavryly/CLionProjects/OpenGL/include/Animation.hpp">
+			<Option target="OpenGL"/>
+		</Unit>
 		<Unit filename="/Users/ggavryly/CLionProjects/OpenGL/include/Menu.hpp">
 			<Option target="OpenGL"/>
 		</Unit>
@@ -116,6 +119,9 @@
 			<Option target="OpenGL"/>
 		</Unit>
 		<Unit filename="/Users/ggavryly/CLionProjects/OpenGL/include/math_3d.hpp">
+			<Option target="OpenGL"/>
+		</Unit>
+		<Unit filename="/Users/ggavryly/CLionProjects/OpenGL/src/Animation.cpp">
 			<Option target="OpenGL"/>
 		</Unit>
 		<Unit filename="/Users/ggavryly/CLionProjects/OpenGL/src/Menu.cpp">

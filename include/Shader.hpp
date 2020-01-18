@@ -4,9 +4,10 @@
 class Shader
 {
 public:
+	Shader();
 	Shader(const GLchar* vertexPath, const GLchar* fragmentPath);
 	
-	Shader(Shader const &);
+	Shader(Shader const &) = default;
 	
 	~Shader();
 public:
