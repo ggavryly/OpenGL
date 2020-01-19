@@ -88,6 +88,19 @@ void Texture::drawTexture()
 	unbindTexture();
 }
 
+void Texture::changePosition(Rect const &rect)
+{
+	GLfloat vertices[] = {
+			rect.x1,  rect.y0, 0.0f,   1.0f, 1.0f,   // Верхний правый
+			rect.x1, rect.y1, 0.0f,   1.0f, 0.0f,   // Нижний правый
+			rect.x0, rect.y1, 0.0f,  0.0f, 0.0f,   // Нижний левый
+			rect.x0,  rect.y0, 0.0f,  0.0f, 1.0f    // Верхний левый
+	};
+	glBindBuffer(GL_ARRAY_BUFFER, VBO);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+	glBindBuffer(GL_ARRAY_BUFFER, 0);
+}
+
 const Rect &Texture::getTextureRect() const
 {
 	return texture_rect;

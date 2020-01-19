@@ -7,7 +7,6 @@ CMakeFiles/OpenGL.dir/src/Animation.cpp.o
  ../include/Shader.hpp
  ../include/Texture.hpp
  ../include/main.hpp
- ../include/math_3d.hpp
  /Users/ggavryly/.brew/Cellar/freetype/2.10.1/include/freetype2/freetype/config/ftheader.h
  /Users/ggavryly/.brew/Cellar/freetype/2.10.1/include/freetype2/ft2build.h
  /Users/ggavryly/.brew/Cellar/glew/2.1.0/include/GL/glew.h
@@ -222,7 +221,6 @@ CMakeFiles/OpenGL.dir/src/Menu.cpp.o
  ../include/Text.hpp
  ../include/Texture.hpp
  ../include/main.hpp
- ../include/math_3d.hpp
  /Users/ggavryly/.brew/Cellar/freetype/2.10.1/include/freetype2/freetype/config/ftheader.h
  /Users/ggavryly/.brew/Cellar/freetype/2.10.1/include/freetype2/ft2build.h
  /Users/ggavryly/.brew/Cellar/glew/2.1.0/include/GL/glew.h
@@ -433,7 +431,6 @@ CMakeFiles/OpenGL.dir/src/Shader.cpp.o
  ../SOIL/src/SOIL.h
  ../include/Shader.hpp
  ../include/main.hpp
- ../include/math_3d.hpp
  /Users/ggavryly/.brew/Cellar/freetype/2.10.1/include/freetype2/freetype/config/ftheader.h
  /Users/ggavryly/.brew/Cellar/freetype/2.10.1/include/freetype2/ft2build.h
  /Users/ggavryly/.brew/Cellar/glew/2.1.0/include/GL/glew.h
@@ -645,7 +642,6 @@ CMakeFiles/OpenGL.dir/src/Text.cpp.o
  ../include/Shader.hpp
  ../include/Text.hpp
  ../include/main.hpp
- ../include/math_3d.hpp
  /Users/ggavryly/.brew/Cellar/freetype/2.10.1/include/freetype2/freetype/config/ftheader.h
  /Users/ggavryly/.brew/Cellar/freetype/2.10.1/include/freetype2/ft2build.h
  /Users/ggavryly/.brew/Cellar/glew/2.1.0/include/GL/glew.h
@@ -857,7 +853,6 @@ CMakeFiles/OpenGL.dir/src/Texture.cpp.o
  ../include/Shader.hpp
  ../include/Texture.hpp
  ../include/main.hpp
- ../include/math_3d.hpp
  /Users/ggavryly/.brew/Cellar/freetype/2.10.1/include/freetype2/freetype/config/ftheader.h
  /Users/ggavryly/.brew/Cellar/freetype/2.10.1/include/freetype2/ft2build.h
  /Users/ggavryly/.brew/Cellar/glew/2.1.0/include/GL/glew.h
@@ -1072,7 +1067,6 @@ CMakeFiles/OpenGL.dir/src/main.cpp.o
  ../include/Text.hpp
  ../include/Texture.hpp
  ../include/main.hpp
- ../include/math_3d.hpp
  /Users/ggavryly/.brew/Cellar/freetype/2.10.1/include/freetype2/freetype/config/ftheader.h
  /Users/ggavryly/.brew/Cellar/freetype/2.10.1/include/freetype2/ft2build.h
  /Users/ggavryly/.brew/Cellar/glew/2.1.0/include/GL/glew.h

@@ -20,7 +20,6 @@ int main()
 	
 	// Define the viewport dimensions
 	glViewport(0, 0, 1024 * 2, 768 * 2);
-	Text text;
 	Menu menu;
 	// Game loop
 	while (!glfwWindowShouldClose(window))
@@ -32,8 +31,7 @@ int main()
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 		
-//		text.displayMessage("123456789012345678901234567890123456789012345678901234567890", Rect(25,25,0,0), glm::vec3(0.5, 0.8f, 0.2f), 1);
-		menu.chooseMenu(EM_LoadMenu);
+		menu.chooseMenu(EM_PauseMenu);
 		// Swap the buffers
 		glfwSwapBuffers(window);
 	}

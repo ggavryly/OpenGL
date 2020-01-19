@@ -55,8 +55,6 @@ glew.h
 ../include/glew.h
 glfw3.h
 ../include/glfw3.h
-math_3d.hpp
-../include/math_3d.hpp
 glm.hpp
 -
 GLUT/glut.h
@@ -69,8 +67,6 @@ ft2build.h
 ../include/ft2build.h
 SOIL.h
 ../include/SOIL.h
-
-../include/math_3d.hpp
 
 /Users/ggavryly/.brew/Cellar/freetype/2.10.1/include/freetype2/freetype/config/ftheader.h
 

@@ -6,7 +6,6 @@ CMakeFiles/OpenGL.dir/src/Animation.cpp.o: ../include/Animation.hpp
 CMakeFiles/OpenGL.dir/src/Animation.cpp.o: ../include/Shader.hpp
 CMakeFiles/OpenGL.dir/src/Animation.cpp.o: ../include/Texture.hpp
 CMakeFiles/OpenGL.dir/src/Animation.cpp.o: ../include/main.hpp
-CMakeFiles/OpenGL.dir/src/Animation.cpp.o: ../include/math_3d.hpp
 CMakeFiles/OpenGL.dir/src/Animation.cpp.o: /Users/ggavryly/.brew/Cellar/freetype/2.10.1/include/freetype2/freetype/config/ftheader.h
 CMakeFiles/OpenGL.dir/src/Animation.cpp.o: /Users/ggavryly/.brew/Cellar/freetype/2.10.1/include/freetype2/ft2build.h
 CMakeFiles/OpenGL.dir/src/Animation.cpp.o: /Users/ggavryly/.brew/Cellar/glew/2.1.0/include/GL/glew.h
@@ -221,7 +220,6 @@ CMakeFiles/OpenGL.dir/src/Menu.cpp.o: ../include/Shader.hpp
 CMakeFiles/OpenGL.dir/src/Menu.cpp.o: ../include/Text.hpp
 CMakeFiles/OpenGL.dir/src/Menu.cpp.o: ../include/Texture.hpp
 CMakeFiles/OpenGL.dir/src/Menu.cpp.o: ../include/main.hpp
-CMakeFiles/OpenGL.dir/src/Menu.cpp.o: ../include/math_3d.hpp
 CMakeFiles/OpenGL.dir/src/Menu.cpp.o: /Users/ggavryly/.brew/Cellar/freetype/2.10.1/include/freetype2/freetype/config/ftheader.h
 CMakeFiles/OpenGL.dir/src/Menu.cpp.o: /Users/ggavryly/.brew/Cellar/freetype/2.10.1/include/freetype2/ft2build.h
 CMakeFiles/OpenGL.dir/src/Menu.cpp.o: /Users/ggavryly/.brew/Cellar/glew/2.1.0/include/GL/glew.h
@@ -432,7 +430,6 @@ CMakeFiles/OpenGL.dir/src/Menu.cpp.o: ../src/Menu.cpp
 CMakeFiles/OpenGL.dir/src/Shader.cpp.o: ../SOIL/src/SOIL.h
 CMakeFiles/OpenGL.dir/src/Shader.cpp.o: ../include/Shader.hpp
 CMakeFiles/OpenGL.dir/src/Shader.cpp.o: ../include/main.hpp
-CMakeFiles/OpenGL.dir/src/Shader.cpp.o: ../include/math_3d.hpp
 CMakeFiles/OpenGL.dir/src/Shader.cpp.o: /Users/ggavryly/.brew/Cellar/freetype/2.10.1/include/freetype2/freetype/config/ftheader.h
 CMakeFiles/OpenGL.dir/src/Shader.cpp.o: /Users/ggavryly/.brew/Cellar/freetype/2.10.1/include/freetype2/ft2build.h
 CMakeFiles/OpenGL.dir/src/Shader.cpp.o: /Users/ggavryly/.brew/Cellar/glew/2.1.0/include/GL/glew.h
@@ -644,7 +641,6 @@ CMakeFiles/OpenGL.dir/src/Text.cpp.o: ../SOIL/src/SOIL.h
 CMakeFiles/OpenGL.dir/src/Text.cpp.o: ../include/Shader.hpp
 CMakeFiles/OpenGL.dir/src/Text.cpp.o: ../include/Text.hpp
 CMakeFiles/OpenGL.dir/src/Text.cpp.o: ../include/main.hpp
-CMakeFiles/OpenGL.dir/src/Text.cpp.o: ../include/math_3d.hpp
 CMakeFiles/OpenGL.dir/src/Text.cpp.o: /Users/ggavryly/.brew/Cellar/freetype/2.10.1/include/freetype2/freetype/config/ftheader.h
 CMakeFiles/OpenGL.dir/src/Text.cpp.o: /Users/ggavryly/.brew/Cellar/freetype/2.10.1/include/freetype2/ft2build.h
 CMakeFiles/OpenGL.dir/src/Text.cpp.o: /Users/ggavryly/.brew/Cellar/glew/2.1.0/include/GL/glew.h
@@ -856,7 +852,6 @@ CMakeFiles/OpenGL.dir/src/Texture.cpp.o: ../SOIL/src/SOIL.h
 CMakeFiles/OpenGL.dir/src/Texture.cpp.o: ../include/Shader.hpp
 CMakeFiles/OpenGL.dir/src/Texture.cpp.o: ../include/Texture.hpp
 CMakeFiles/OpenGL.dir/src/Texture.cpp.o: ../include/main.hpp
-CMakeFiles/OpenGL.dir/src/Texture.cpp.o: ../include/math_3d.hpp
 CMakeFiles/OpenGL.dir/src/Texture.cpp.o: /Users/ggavryly/.brew/Cellar/freetype/2.10.1/include/freetype2/freetype/config/ftheader.h
 CMakeFiles/OpenGL.dir/src/Texture.cpp.o: /Users/ggavryly/.brew/Cellar/freetype/2.10.1/include/freetype2/ft2build.h
 CMakeFiles/OpenGL.dir/src/Texture.cpp.o: /Users/ggavryly/.brew/Cellar/glew/2.1.0/include/GL/glew.h
@@ -1071,7 +1066,6 @@ CMakeFiles/OpenGL.dir/src/main.cpp.o: ../include/Shader.hpp
 CMakeFiles/OpenGL.dir/src/main.cpp.o: ../include/Text.hpp
 CMakeFiles/OpenGL.dir/src/main.cpp.o: ../include/Texture.hpp
 CMakeFiles/OpenGL.dir/src/main.cpp.o: ../include/main.hpp
-CMakeFiles/OpenGL.dir/src/main.cpp.o: ../include/math_3d.hpp
 CMakeFiles/OpenGL.dir/src/main.cpp.o: /Users/ggavryly/.brew/Cellar/freetype/2.10.1/include/freetype2/freetype/config/ftheader.h
 CMakeFiles/OpenGL.dir/src/main.cpp.o: /Users/ggavryly/.brew/Cellar/freetype/2.10.1/include/freetype2/ft2build.h
 CMakeFiles/OpenGL.dir/src/main.cpp.o: /Users/ggavryly/.brew/Cellar/glew/2.1.0/include/GL/glew.h

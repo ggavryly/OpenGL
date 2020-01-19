@@ -9,7 +9,6 @@
 #include <memory>
 #include "glew.h"
 #include "glfw3.h"
-#include "math_3d.hpp"
 #include <glm.hpp>
 #include <GLUT/glut.h>
 #include <gtc/matrix_transform.hpp>

@@ -1,11 +1,14 @@
 #include "Menu.hpp"
 Menu::Menu()
 {
+	float tmp;
 	start_background.loadTexture("../textures/start_back.png", Rect(-1,1,1,-1));
 	load_save_background.loadTexture("../textures/load_save_back.png", Rect(-1,1,1,-1));
-	load_save_slot0.loadTexture("../textures/load_save_slot0.png", Rect(-0.763,0.43,-0.415,-0.01));
-	load_save_slot1.loadTexture("../textures/load_save_slot1.png", Rect(-0.245,0.43,0.1,-0.01));
-	load_save_slot2.loadTexture("../textures/load_save_slot0.png", Rect(0.27,0.43,0.615,-0.01));
+	option_background.loadTexture("../textures/options_back.png", Rect(-1,1,1,-1));
+	fill_fullscreen.loadTexture("../textures/fill.png", Rect(-0.426,0.81,-0.33,0.72));
+	fill_audio.loadTexture("../textures/fill.png", Rect(-0.426,0.652,-0.33,0.56));
+	scroll.loadTexture("../textures/scroll.png", Rect(-0.36, 0.345, -0.16,0.255));
+	sample_back.loadTexture("../textures/bomberman_sample_back.png", Rect(-1,1,1,-1));
 	curr_start = 0;
 	curr_load = 0;
 	curr_save = 0;
@@ -27,18 +30,21 @@ void Menu::chooseMenu(EMenu choose)
 			startMenu(abs(curr_start % ES_COUNT));
 			break;
 		case EM_LoadMenu :
-			loadMenu(abs(curr_load % ELS_COUNT));
+			loadSaveMenu(abs(curr_load % ELS_COUNT));
 			break;
-//		case ESaveMenu :
-//			startMenu(EStartGame);
+		case EM_SaveMenu :
+			loadSaveMenu(abs(curr_save % ELS_COUNT));
 			break;
 		case EM_PauseMenu :
-//			startMenu(EStartGame);
+			pauseMenu(abs(curr_pause % EPP_COUNT));
 			break;
 		case EM_OptionsMenu :
-//			startMenu(StartGame);
+			optionsMenu((abs(curr_options % EO_COUNT)));
 			break;
-		case EM_Exit :
+		case EM_PopUpMenu :
+			popUpMenu((abs(curr_pop_up % EP_COUNT)));
+			break;
+		case EM_DieMenu :
 			// code;
 			break;
 	}
@@ -50,6 +56,53 @@ void Menu::renderText(int choose, int x, int y, std::string message, int curr)
 		text.displayMessage(message, Rect(x,y,0,0), glm::vec3(0.8,0.0f,0.0f), 0.5);
 	else
 		text.displayMessage(message, Rect(x,y,0,0), glm::vec3(0.0,0.0f,0.0f), 0.5);
+}
+
+void Menu::popUpMenu(int choose)
+{
+	sample_back.drawTexture();
+	renderText(0,350, 500, "Are you sure?", -1);
+	for (int i = 0; i < EP_COUNT; i++)
+	{
+		switch (EPopUpMenu(i))
+		{
+			case EP_YES:
+				renderText(choose ,390,455, "Yes", EP_YES);
+				break;
+			case EP_NO:
+				renderText(choose ,505,455, "No", EP_NO);
+				break;
+		}
+	}
+}
+
+void Menu::pauseMenu(int choose)
+{
+	sample_back.drawTexture();
+	for (int i = 0; i < EPP_COUNT; i++)
+	{
+		switch (EPauseMenu(i))
+		{
+			case EPP_RESUME_GAME:
+				renderText(choose ,400,550, "Resume Game", EPP_RESUME_GAME);
+				break;
+			case EPP_NEW_GAME:
+				renderText(choose ,400,500, "New Game", EPP_NEW_GAME);
+				break;
+			case EPP_LOAD_GAME:
+				renderText(choose ,400,450, "Load Game", EPP_LOAD_GAME);
+				break;
+			case EPP_SAVE_GAME:
+				renderText(choose ,400,400, "Save Game", EPP_SAVE_GAME);
+				break;
+			case EPP_OPTIONS:
+				renderText(choose ,400,350, "Options", EPP_OPTIONS);
+				break;
+			case EPP_EXIT:
+				renderText(choose ,400,300, "Exit", EPP_EXIT);
+				break;
+		}
+	}
 }
 
 void Menu::startMenu(int choose)
@@ -78,31 +131,99 @@ void Menu::startMenu(int choose)
 	}
 }
 
-void Menu::loadMenu(int choose)
+void Menu::loadSaveMenu(int choose)
 {
 	load_save_background.drawTexture();
-	load_save_slot0.drawTexture();
-	load_save_slot1.drawTexture();
-	load_save_slot2.drawTexture();
-	renderText(0, 404, 455, "-Empty-", -1);
-	renderText(false, 140, 455, "-Empty-", -1);
-	renderText(false, 668, 455, "-Empty-", -1);
-//	renderText("Empty", 500, 500);
-//	renderText("Empty",);
-//	for (int i = 0; i < ELS_COUNT; i++)
-//	{
-//		switch (ELoadSaveMenu(i))
-//		{
-//			case ELS_FIRST:
-//				renderText(choose ,100,300, "Start Game", ELS_FIRST);
-//				break;
-//			case ELS_SECOND:
-//				renderText(choose ,100,250, "Load Game", ELS_SECOND);
-//				break;
-//			case ELS_THIRD:
-//				renderText(choose ,100,200, "Save Game", ELS_THIRD);
-//				break;
-//		}
-//	}
+	for (int i = 0; i < ELS_COUNT; i++)
+	{
+		switch (ELoadSaveMenu(i))
+		{
+			case ELS_FIRST:
+				renderText(choose, 65, 450, "-Empty-", ELS_FIRST);
+				break;
+			case ELS_SECOND:
+				renderText(choose, 425, 450, "-Empty-", ELS_SECOND);
+				break;
+			case ELS_THIRD:
+				renderText(choose, 785, 450, "-Empty-", ELS_THIRD);
+				break;
+		}
+	}
 }
+
+void Menu::renderResolutionScroll(EOptions choose)
+{
+	switch (choose)
+	{
+		case EO_WINDOW_SIZE_640x480:
+			scroll.changePosition(Rect(WINDOW_SIZE_640x480,0.345,WINDOW_SIZE_640x480 + 0.26,0.255));
+			scroll.drawTexture();
+			renderText(0,550,450,"640x480",-1);
+			break;
+		case EO_WINDOW_SIZE_800x600:
+			scroll.changePosition(Rect(WINDOW_SIZE_800x600,0.345,WINDOW_SIZE_800x600 + 0.26,0.255));
+			scroll.drawTexture();
+			renderText(0,550,450,"800x600",-1);
+			break;
+		case EO_WINDOW_SIZE_1024x768:
+			scroll.changePosition(Rect(WINDOW_SIZE_1024x768,0.345,WINDOW_SIZE_1024x768 + 0.26,0.255));
+			scroll.drawTexture();
+			renderText(0,550,450,"1024x768",-1);
+			break;
+		case EO_WINDOW_SIZE_1440x900:
+			scroll.changePosition(Rect(WINDOW_SIZE_1440x900,0.345,WINDOW_SIZE_1440x900 + 0.26,0.255));
+			scroll.drawTexture();
+			renderText(0,550,450,"1440x900",-1);
+			break;
+		case EO_WINDOW_SIZE_2560x1440:
+			scroll.changePosition(Rect(WINDOW_SIZE_2560x1440,0.345,WINDOW_SIZE_640x480 + 0.26,0.255));
+			scroll.drawTexture();
+			renderText(0,550,450,"2560x1440",-1);
+			break;
+	}
+}
+
+void Menu::optionsMenu(int choose)
+{
+	option_background.drawTexture();
+	for (int i = 0; i < EO_COUNT; i++)
+	{
+		switch (EOptions (i))
+		{
+			case EO_FULLSCREEN:
+				options_fullscreen ? fill_fullscreen.drawTexture() : void();
+				renderText(choose,60,670, "FULLSCREEN", EO_FULLSCREEN );
+				break;
+			case EO_AUDIO:
+				options_audio ? fill_audio.drawTexture() : void();
+				renderText(choose,180,605, "AUDIO", EO_AUDIO);
+				break;
+			case EO_WINDOW:
+				renderResolutionScroll(EOptions(abs(curr_options_window % 5) + 10));
+				renderText(choose,50,490,"RESOLUTION", EO_WINDOW);
+				break;
+			case EO_BIND_UP:
+				renderText(choose,220,370, "UP", EO_WINDOW);
+//				renderText(choose,0,0, std::to_string(options_move_up),-1);
+				break;
+			case EO_BIND_DOWN:
+				renderText(choose,175,315, "DOWN", EO_BIND_DOWN);
+//				renderText(choose,0,0, std::to_string(options_move_down),-1);
+				break;
+			case EO_BIND_LEFT:
+				renderText(choose,177,265, "LEFT", EO_BIND_LEFT);
+//				renderText(choose,0,0, std::to_string(options_move_left),-1);
+				break;
+			case EO_BIND_RIGHT:
+				renderText(choose,167,215, "RIGHT", EO_BIND_RIGHT);
+//				renderText(choose,0,0, std::to_string(options_move_right),-1);
+				break;
+			case EO_BIND_ATTACK:
+				renderText(choose,137,165, "ATTACK", EO_BIND_ATTACK);
+//				renderText(choose,0,0, std::to_string(options_attack),-1);
+				break;
+		}
+	}
+}
+
 

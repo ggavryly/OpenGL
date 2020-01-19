@@ -12,6 +12,7 @@ public:
 
 	void loadTexture(std::string const & path, Rect const &rect);
 	void unloadTexture();
+	void changePosition(Rect const &);
 
 	void bindTexture();
 	void unbindTexture();
