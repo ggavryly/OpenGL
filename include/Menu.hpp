@@ -37,6 +37,13 @@ enum EPopUpMenu
 	EP_COUNT = 2
 };
 
+enum EDieMenu
+{
+	ED_MAIN_MENU,
+	ED_EXIT,
+	ED_COUNT = 2
+};
+
 enum EPauseMenu
 {
 	EPP_RESUME_GAME,
@@ -87,7 +94,7 @@ public:
 	void startMenu(int);
 	void loadSaveMenu(int);
 	void renderResolutionScroll(EOptions);
-	void dieMenu();
+	void dieMenu(int);
 	void userDisplay();
 	void popUpMenu(int);
 	void optionsMenu(int choose);
@@ -98,6 +105,7 @@ private:
 	int 					curr_pause;
 	int 					curr_pop_up;
 	int 					curr_options;
+	int 					curr_die;
 	int 					curr_options_window;
 	bool 					options_fullscreen;
 	bool 					options_audio;
@@ -109,14 +117,16 @@ private:
 	int 					options_attack;
 	int 					curr_load;
 	int 					curr_save;
-	int 					curr_exit;
+	int 					level;
+	int 					time;
+	int 					score;
 	Texture					start_background;
 	Texture					load_save_background;
 	Texture					fill_fullscreen;
 	Texture					sample_back;
 	Texture					fill_audio;
 	Texture					scroll;
-	Texture					hud_background;
+	Texture					user_display;
 	Texture					option_background;
 	Text					text;
 };

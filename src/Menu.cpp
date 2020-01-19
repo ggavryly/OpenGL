@@ -1,7 +1,6 @@
 #include "Menu.hpp"
 Menu::Menu()
 {
-	float tmp;
 	start_background.loadTexture("../textures/start_back.png", Rect(-1,1,1,-1));
 	load_save_background.loadTexture("../textures/load_save_back.png", Rect(-1,1,1,-1));
 	option_background.loadTexture("../textures/options_back.png", Rect(-1,1,1,-1));
@@ -12,7 +11,6 @@ Menu::Menu()
 	curr_start = 0;
 	curr_load = 0;
 	curr_save = 0;
-	curr_exit = 0;
 	curr_pause = 0;
 }
 
@@ -45,7 +43,10 @@ void Menu::chooseMenu(EMenu choose)
 			popUpMenu((abs(curr_pop_up % EP_COUNT)));
 			break;
 		case EM_DieMenu :
-			// code;
+			dieMenu((abs(curr_die % ED_COUNT)));
+			break;
+		case EM_UserDisplay :
+			userDisplay();
 			break;
 	}
 }
@@ -103,6 +104,32 @@ void Menu::pauseMenu(int choose)
 				break;
 		}
 	}
+}
+
+void Menu::dieMenu(int choose)
+{
+	sample_back.drawTexture();
+	renderText(0,400,550, "You Die!",-1);
+	for (int i = 0; i < ED_COUNT; i++)
+	{
+		switch (EDieMenu(i))
+		{
+			case ED_MAIN_MENU:
+				renderText(choose ,370,450, "Main Menu", ED_MAIN_MENU);
+				break;
+			case ED_EXIT:
+				renderText(choose ,370,400, "Exit", ED_EXIT);
+				break;
+		}
+	}
+}
+
+void Menu::userDisplay()
+{
+	user_display.drawTexture();
+	text.displayMessage("Score " + std::to_string(score), Rect(15,740,0,0),glm::vec3(1,1,1),0.5f);
+	text.displayMessage("Time " + std::to_string(time), Rect(400,740,0,0),glm::vec3(1,1,1),0.5f);
+	text.displayMessage("Level 1-" + std::to_string(level), Rect(820,740,0,0),glm::vec3(1,1,1),0.5f);
 }
 
 void Menu::startMenu(int choose)
